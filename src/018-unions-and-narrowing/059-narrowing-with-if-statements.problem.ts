@@ -1,7 +1,7 @@
 import { expect, it } from "vitest";
 
 function validateUsername(username: string | null): boolean {
-  if (typeof username == "string") {
+  if (typeof username === "string") {
     return username.length > 5;
   }
 
