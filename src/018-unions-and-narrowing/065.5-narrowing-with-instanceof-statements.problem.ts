@@ -11,7 +11,11 @@ try {
 } catch (error) {
   // How do we change this code to make it
   // not show a red squiggly?
-  if (true) {
-    console.error(error.message);
+  if (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      throw error;
+    }
   }
 }
